@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100vw;
+    max-height: 100vh;
+    height: 100%;
+    background-color: var(--primary);
+    overflow-x: hidden;
+    scrollbar-width: none;  /* Firefox */
+    font-family: 'Space Mono', monospace;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+h1,h2,h3,h4,p {
+    color: var(--fourth);
+}
+
+span {
+    color: var(--third);
+}
+
+main {
+    width: 100%;
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows:    repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.sensor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100vw - 82rem);
+    margin: 0 auto;
+    background-color: var(--secondary);
+    border: 2px solid var(--third);
+    padding: 15px 0;
+}
+
+.info-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: calc(100% - 10rem);
+}
+
+.cropper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 103px;
+    height: 103px;
+    border-radius: 100%;
+    /*padding: 30px;*/
+}
+
+.stat-container > p {
+    font-size: 1.2em;
+}
+
+.stat-container > span, .left > h4 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.stat-container {
+    display: flex;
+}
+
+.status-light {
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.status-light > span {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    display: block;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.right {
+    padding: 15px;
+    text-align: center;
+}
+
+.right-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: inherit;
+}
+
+.require_maintenance {
+    color: red;
+}
+
+.ip-connection {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.good {
+    background-color: green;
+}
+
+.bad {
+    background-color: red;
+}
+
+.working {
+    color: rgb(0, 199, 0);
+}
